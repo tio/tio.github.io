@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Go TTY - The really simple TTY terminal application</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>gotty</h1>
+        <h2>Go TTY - The really simple TTY terminal application</h2>
+        <div class="downloads">
+        <section id="downloads">
+          <a href="https://github.com/gotty/gotty/releases/download/v1.1/gotty-1.1.tar.xz" class="btn">Download gotty-1.1.tar.xz</a>
+          <a href="https://github.com/gotty/gotty" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h3>
+<a name="whatis" class="anchor" href="#whatis"><span class="octicon octicon-link"></span></a>What is Go TTY?</h3>
+
+<p>Go TTY or "gotty" is a really simple TTY terminal application which features
+a simple commandline interface to easily connect to TTY devices for basic
+input/output.</p>
+
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
+<p>The commandline interface is really simple and pretty much self explanatory:</p>
+<pre><code>$ gotty --help
+Usage: gotty [&lt;options&gt;] &lt;tty device&gt;
+
+Options:
+  -b, --baudrate &lt;baudrate&gt;   Baud rate (default: 115200)
+  -d, --databits 5|6|7|8      Data bits (default: 8)
+  -f, --flow hard|soft|none   Flow control (default: none)
+  -s, --stopbits 1|2          Stop bits (default: 1)
+  -p, --parity odd|even|none  Parity (default: none)
+  -n, --no-autoconnect        Disable automatic connect
+  -v, --version               Display version
+  -h, --help                  Display help
+
+In session, press ctrl-g + q to quit.
+</code></pre>
+
+<p> The only option which requires a bit of elaboration is the --no-autoconnect
+    option. </p>
+
+<p> By default gotty automatically connects to the provided device if present.
+    If the device is not present it will wait for it to appear and then
+    connect. If the connection is lost (eg. device disconnects) it will wait
+    for the device to reappear and then reconnect. </p>
+
+<p> However, if the --no-autoconnect option is provided gotty will exit if the
+    device is not present or exit if an established connection is lost. </p>
+
+<p> Go TTY features full bash autocompletion support.</p>
+<h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<p><b>From source tarball:</b></p>
+<pre><code>$ ./configure
+$ make
+$ make install
+</code></pre>
+
+<p><b>Ubuntu:</b></p>
+<pre><code>$ sudo apt-add-repository ppa:team-gotty/gotty
+$ sudo apt-get update
+$ sudo apt-get install gotty
+</code></pre>
+<p><b>Arch Linux:</b></p>
+<p>Unofficial AUR package: <a href="https://aur.archlinux.org/packages/gotty">aur.archlinux.org/packages/gotty</a></p>
+<p>To install, follow instructions from the <a href="https://wiki.archlinux.org/index.php/Arch_User_Repository#Installing_packages">Arch wiki</a>.</p>
+
+<h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
+<p> Go TTY is open source released under the GPLv2 license. </p>
+
+<h3>
+<a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h3>
+<p>Submit bug reports via github <a href="https://github.com/gotty/gotty/issues">here</a>.</p>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
