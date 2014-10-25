@@ -173,6 +173,10 @@ blockquote {
   border-left: 1px dotted #666;
 }
 
+p {
+  text-align: justify;
+}
+
 pre {
   background: rgba(0, 0, 0, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.15);
