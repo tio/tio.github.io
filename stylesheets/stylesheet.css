@@ -80,6 +80,7 @@ footer {
 
 footer a {
   color: #666;
+  text-shadow: none;
 }
 footer a:hover {
   color: #444;
