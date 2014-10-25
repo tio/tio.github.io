@@ -68,6 +68,23 @@ header h2 {
   color: #666;
 }
 
+footer {
+/*  background: transparent url('../images/hr.png') 0 0 no-repeat; */
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 13px;
+  color: #aaa;
+  text-align: center;
+}
+
+footer a {
+  color: #666;
+}
+footer a:hover {
+  color: #444;
+}
+
 .downloads {
   text-align: center;
 }
