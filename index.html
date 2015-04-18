@@ -19,7 +19,7 @@
         <h2>Go TTY - The really simple TTY terminal application</h2>
         <div class="downloads">
         <section id="downloads">
-          <a href="https://github.com/gotty/gotty/releases/download/v1.1/gotty-1.1.tar.xz" class="btn">Download gotty-1.1.tar.xz</a>
+          <a href="https://github.com/gotty/gotty/releases/download/v1.2/gotty-1.2.tar.gz" class="btn">Download gotty-1.2.tar.gz</a>
           <a href="https://github.com/gotty/gotty" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
         </section>
         </div>
@@ -46,11 +46,12 @@ input/output.</p>
 Usage: gotty [&lt;options&gt;] &lt;tty device&gt;
 
 Options:
-  -b, --baudrate &lt;baudrate&gt;   Baud rate (default: 115200)
+  -b, --baudrate &lt;bps&gt;        Baud rate (default: 115200)
   -d, --databits 5|6|7|8      Data bits (default: 8)
   -f, --flow hard|soft|none   Flow control (default: none)
   -s, --stopbits 1|2          Stop bits (default: 1)
   -p, --parity odd|even|none  Parity (default: none)
+  -o, --output-delay &lt;ms&gt;     Output delay (default: 0)
   -n, --no-autoconnect        Disable automatic connect
   -v, --version               Display version
   -h, --help                  Display help
