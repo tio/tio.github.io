@@ -8,19 +8,19 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
 
-    <title>Go TTY</title>
+    <title>tio</title>
   </head>
 
   <body>
 
     <header>
       <div class="container">
-        <h1>gotty</h1>
-        <h2>Go TTY - The really simple TTY terminal application</h2>
+        <h1>tio</h1>
+        <h2>The simple TTY terminal i/o application</h2>
         <div class="downloads">
         <section id="downloads">
-          <a href="https://github.com/gotty/gotty/releases/download/v1.5/gotty-1.5.tar.xz" class="btn">Download gotty-1.5.tar.xz</a>
-          <a href="https://github.com/gotty/gotty" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+          <a href="https://github.com/tio/tio/releases/download/v1.6/tio-1.6.tar.xz" class="btn">Download tio-1.6.tar.xz</a>
+          <a href="https://github.com/tio/tio" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
         </section>
         </div>
       </div>
@@ -33,17 +33,17 @@
 <img src="images/gotty-screencast.gif" alt="Gotty live" title="Gotty live"/>
 </p>
 
-<a name="whatis" class="anchor" href="#whatis"><span class="octicon octicon-link"></span></a>What is Go TTY?</h3>
+<a name="whatis" class="anchor" href="#whatis"><span class="octicon octicon-link"></span></a>What is tio?</h3>
 
-<p>Go TTY or "gotty" is a really simple TTY terminal application which features
-a simple commandline interface to easily connect to TTY devices for basic
+<p>"tio" is a simple TTY terminal application which features a straightforward
+commandline interface to easily connect to TTY devices for basic
 input/output.</p>
 
 <h3>
 <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
-<p>The commandline interface is straightforward:</p>
-<pre><code>$ gotty --help
-Usage: gotty [&lt;options&gt;] &lt;tty device&gt;
+<p>The commandline interface features the following options:</p>
+<pre><code>$ tio --help
+Usage: tio [&lt;options&gt;] &lt;tty device&gt;
 
 Options:
   -b, --baudrate &lt;bps&gt;        Baud rate (default: 115200)
@@ -63,15 +63,15 @@ In session, press ctrl-g + q to quit.
 <p> The only option which requires a bit of elaboration is perhaps the --no-autoconnect
     option. </p>
 
-<p> By default gotty automatically connects to the provided device if present.
+<p> By default tio automatically connects to the provided device if present.
     If the device is not present it will wait for it to appear and then
     connect. If the connection is lost (eg. device disconnects) it will wait
     for the device to reappear and then reconnect. </p>
 
-<p> However, if the --no-autoconnect option is provided gotty will exit if the
+<p> However, if the --no-autoconnect option is provided tio will exit if the
     device is not present or exit if an established connection is lost. </p>
 
-<p> Go TTY features full bash autocompletion support.</p>
+<p> Features full bash autocompletion support.</p>
 <h3>
 <a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
 
@@ -92,11 +92,11 @@ $ sudo apt-get install gotty
 
 <h3>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
-<p> Go TTY is open source released under the GPLv2 license. </p>
+<p> Tio is open source released under the GPLv2 license. </p>
 
 <h3>
 <a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h3>
-<p>Submit bug reports via github <a href="https://github.com/gotty/gotty/issues">here</a>.</p>
+<p>Submit bug reports via github <a href="https://github.com/tio/tio/issues">here</a>.</p>
       </section>
 
     </div>
