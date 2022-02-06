@@ -1,143 +1,55 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>tio</title>
+    <link rel="icon" href="tio.png">
+
+    <meta http-equiv="Refresh" content="0; url='https://github.com/tio/tio'" />
 
     <!-- Global Site Tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106890056-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)};
+      function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
+
       gtag('config', 'UA-106890056-1');
     </script>
+    <style>
 
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+a:link {
+  color: darkgray;
+  background-color: transparent;
+  text-decoration: none;
+}
 
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+a:visited {
+  color: darkgray;
+  background-color: transparent;
+  text-decoration: none;
+}
 
-    <title>tio</title>
-    <link rel="icon" href="images/tio.ico">
+a:hover {
+  color: darkgray;
+  background-color: transparent;
+  text-decoration: none;
+}
 
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+    </style>
   </head>
 
-  <body>
+  <body style="background-color:#202124">
+    <img src="tio.png">
+    <p style="font-family:Arial;color:gray">
+    Simple TTY terminal tool which features a straightforward command-line
+    interface to easily connect to TTY devices for basic input/output.
+    </p>
 
-    <header>
-      <div class="container">
-        <h1>tio</h1>
-        <h2>A simple TTY terminal I/O application</h2>
-        <div class="downloads">
-        <section id="downloads">
-          <a href="https://github.com/tio/tio/releases/download/v1.32/tio-1.32.tar.xz" class="btn">Download tio-1.32.tar.xz</a>
-          <a href="https://github.com/tio/tio" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
-        </div>
-      </div>
-    </header>
-
-    <div class="container">
-      <section id="main_content">
-        <h3>
-
-<p>
-<img src="images/tio-demo.gif" alt="Tio demo" title="Tio demo"/>
-</p>
-
-
-<a name="whatis" class="anchor" href="#whatis"><span class="octicon octicon-link"></span></a>What is tio?</h3>
-
-<p>"tio" is a simple TTY terminal application which features a straightforward
-commandline interface to easily connect to TTY devices for basic
-input/output.</p>
-
-<h3>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
-<p>The commandline interface features the following options:</p>
-<pre><code>$ tio --help
-Usage: tio [&lt;options&gt;] &lt;tty device&gt;
-
-Options:
-  -b, --baudrate &lt;bps&gt;        Baud rate (default: 115200)
-  -d, --databits 5|6|7|8      Data bits (default: 8)
-  -f, --flow hard|soft|none   Flow control (default: none)
-  -s, --stopbits 1|2          Stop bits (default: 1)
-  -p, --parity odd|even|none  Parity (default: none)
-  -o, --output-delay &lt;ms&gt;     Output delay (default: 0)
-  -n, --no-autoconnect        Disable automatic connect
-  -l, --log &lt;filename&gt;        Log to file
-  -m, --map &lt;flags&gt;           Map special characters
-  -v, --version               Display version
-  -h, --help                  Display help
-
-In session, press ctrl-t + q to quit.
-</code></pre>
-
-<p> The only option which requires a bit of elaboration is perhaps the --no-autoconnect
-    option. </p>
-
-<p> By default tio automatically connects to the provided device if present.
-    If the device is not present it will wait for it to appear and then
-    connect. If the connection is lost (eg. device disconnects) it will wait
-    for the device to reappear and then reconnect. </p>
-
-<p> However, if the --no-autoconnect option is provided tio will exit if the
-    device is not present or exit if an established connection is lost. </p>
-
-<p> Features full bash autocompletion support.</p>
-<h3>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
-
-<p><b>From source tarball:</b></p>
-<pre><code>$ ./configure
-$ make
-$ make install
-</code></pre>
-
-<p><b>Ubuntu / Debian:</b></p>
-<pre><code>$ apt install tio</code></pre>
-
-<p><b>Fedora / RHEL:</b></p>
-<pre><code>$ dnf install tio</code></pre>
-
-<p><b>FreeBSD:</b></p>
-<pre><code>$ cd /usr/ports/comms/tio
-$ make install clean
-</code></pre>
-
-<p><b>LEDE Project/OpenWrt</b></p>
-<pre><code>$ opkg install tio</code></pre>
-
-<p><b>Arch Linux:</b></p>
-<p>AUR package is available <a href="https://aur.archlinux.org/packages/tio">here</a>.</p>
-
-<p><b>Snap:</b></p>
-<pre><code>$ snap install tio --classic</code></pre>
-<p>Visit <a href="https://snapcraft.io">snapcraft.io</a> to see how to install snap for your distribution.</p>
-
-<h3>
-<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
-<p> Tio is open source released under the GPLv2+ license. </p>
-
-<h3>
-<a name="support" class="anchor" href="#support"><span class="octicon octicon-link"></span></a>Support</h3>
-<p>Please submit bug reports etc. via GitHub <a href="https://github.com/tio/tio/issues">here</a>.</p>
-
-<p>If you find this free open source software useful please consider making a donation.</p>
-
-<p align="center" style="text-align: center">
-<a href="https://www.paypal.me/lundmar" alt="Donate" title="Thank you!"><img align="middle" src="https://www.paypal.com/en_US/i/btn/x-click-but21.gif"></a>
-</p>
-
-      </section>
-
-    </div>
-
-    <footer>
-      Hosted by <a href="https://www.github.com">GitHub</a>.
-    </footer>
-
+    <p style="font-family:Arial;color:gray">Visit <a href="https://github.com/tio/tio">Github</a> for more details</p>
   </body>
 </html>
